@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## Roteiros de estudos para Maratona de Programação
 
-You can use the [editor on GitHub](https://github.com/Time-Made-In-UFC/Time-Made-In-UFC.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+nº | Tema                              | Status
+----------------------------------------------
+1  | [Introdução à programação] (Temas/README.md)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2787 - Xadrez
 
-```markdown
-Syntax highlighted code block
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2176 - Paridade
 
-# Header 1
-## Header 2
-### Header 3
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2785 - Pirâmide
 
-- Bulleted
-- List
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2802 - Dividindo Círculos
 
-1. Numbered
-2. List
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2968 - Hora da Corrida
 
-**Bold** and _Italic_ and `Code` text
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2812 - Laércio
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Time-Made-In-UFC/Time-Made-In-UFC.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+https://www.urionlinejudge.com.br/judge/pt/problems/view/2786 - Piso da Escola
