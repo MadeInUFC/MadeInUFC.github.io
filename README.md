@@ -5,17 +5,22 @@ nº | Tema                              | Status
 1  | [Introdução à programação] (Temas/README.md)
 
 
+[Xadrez](https://www.urionlinejudge.com.br/judge/pt/problems/view/2787)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2787 - Xadrez
+[Paridade](https://www.urionlinejudge.com.br/judge/pt/problems/view/2176)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2176 - Paridade
+[Pirâmide](https://www.urionlinejudge.com.br/judge/pt/problems/view/2785)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2785 - Pirâmide
+[Dividindo Circulos](https://www.urionlinejudge.com.br/judge/pt/problems/view/2802)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2802 - Dividindo Círculos
+[Hora da Corrida](https://www.urionlinejudge.com.br/judge/pt/problems/view/2968)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2968 - Hora da Corrida
+[Laércio](https://www.urionlinejudge.com.br/judge/pt/problems/view/2812)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2812 - Laércio
+[Piso da Escola](https://www.urionlinejudge.com.br/judge/pt/problems/view/2786)
 
-https://www.urionlinejudge.com.br/judge/pt/problems/view/2786 - Piso da Escola
+[O filme](https://www.urionlinejudge.com.br/judge/pt/problems/view/1963)
+
+[Jornada nas Estrelas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1973)
+
+[Pepe, Já Tirei a Vela](https://www.urionlinejudge.com.br/judge/pt/problems/view/2152)
