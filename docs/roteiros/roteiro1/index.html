@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Made in UFC</title>
+  </head>
+  <body class="container">
+    <header class="jumbotron">
+      <h1>Made in UFC - Roteiro 1 </h1>
+      <p class="lead">
+        Introdução à programação
+      </p>
+      <hr class="my-4">
+      <p>Problemas básicos de maratonas de programação</p>
+      <p>Dificuldade baixa</p>
+      <a class="btn btn-primary btn-lg" href="https://madeinufc.github.io" role="button">Lista de roteiros</a>
+    </header>
+
+    <h3>
+        Lista de problemas.
+    </h3>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Problema</th>
+            <th scope="col">Origem</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody id="problemas">
+          <!-- Aqui será gerada um lista dinamicante com javascript -->
+        </tbody>
+      </table>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Gerando lista automática de problemas -->
+    <script>
+        const roteiros = [{
+          titulo: "Xadrez",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2787",
+          status: false
+        },{
+          titulo: "Paridade",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2176",
+          status: false
+        },{
+          titulo: "Pirâmide",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2785",
+          status: false
+        },{
+          titulo: "Dividindo círculos",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2968",
+          status: false
+        },{
+          titulo: "Hora da corriga",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2812",
+          status: false
+        },{
+          titulo: "Laércio",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2786",
+          status: false
+        },{
+          titulo: "O filme",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1963",
+          status: false
+        },{
+          titulo: "Jornada nas estrelas",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1973",
+          status: false
+        },{
+          titulo: "Pepe, já tirei a vela",
+          titulo_origem: "URI",
+          link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2152",
+          status: false
+        }
+
+        ];
+  
+        const lista = document.getElementById("problemas");
+        let count = 1;
+  
+        roteiros.forEach(p => {
+          const novaLinha = document.createElement("tr");
+          const num = document.createElement("th");
+          const titulo = document.createElement("td");
+          const link = document.createElement("a");
+          const origem = document.createElement("td");
+          const origemLink = document.createElement("a");
+          const status = document.createElement("td");
+  
+          num.scope = "row";
+          num.innerHTML = count;
+          novaLinha.appendChild(num);
+
+          if(p.status){
+            link.innerHTML = p.titulo;
+            link.href = "https://madeinufc.github.io/roteiros/roteiro1/problemas/problema"+count+"/index.html";
+            titulo.appendChild(link);
+            novaLinha.appendChild(titulo);
+
+          } else {
+            titulo.innerHTML = p.titulo;
+            novaLinha.appendChild(titulo);
+
+          }
+  
+          origemLink.innerHTML = p.titulo_origem;
+          origemLink.href = p.link_origem;
+          origem.appendChild(origemLink);
+          novaLinha.appendChild(origem);
+
+          if(p.status) status.innerHTML =  "&#x1F388;";
+          else status.innerHTML = "à ser feita";
+          novaLinha.appendChild(status);
+  
+          lista.appendChild(novaLinha);
+          count++;
+  
+        });
+      </script>
+  </body>
+</html>

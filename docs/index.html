@@ -28,15 +28,13 @@
     <table class="table">
         <thead class="thead-dark">
           <tr>
+            <th scope="col">#</th>
             <th scope="col">Tema</th>
             <th scope="col">Status</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><a href="https://madeinufc.github.io/roteiros/roteiro1/index.html">Introdução à programação</a></td>
-            <td>0/20</td>
-          </tr>
+        <tbody id="roteiros">
+          <!-- Aqui será gerada uma lista dinamicamente com javascript -->
         </tbody>
       </table>
 
@@ -45,5 +43,44 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <!-- Gerando lista automática de roteiros -->
+    <script>
+      const roteiros = [{
+        titulo: "Introdução a programação",
+        total_de_problemas: 10,
+        problemas_resolvidos: 0,
+      }];
+
+      const lista = document.getElementById("roteiros");
+      let count = 1;
+
+      roteiros.forEach(r => {
+        const novaLinha = document.createElement("tr");
+        const num = document.createElement("th");
+        const titulo = document.createElement("td");
+        const link = document.createElement("a");
+        const status = document.createElement("td");
+
+        num.scope = "row";
+        num.innerHTML = count;
+        novaLinha.appendChild(num);
+
+        link.innerHTML = r.titulo;
+        link.href = "https://madeinufc.github.io/roteiros/roteiro"+count+"/index.html";
+        titulo.appendChild(link);
+        novaLinha.appendChild(titulo);
+
+        if(r.problemas_resolvidos === r.total_de_problemas) status.innerHTML =  "&#x1F388;";
+        else status.innerHTML = r.problemas_resolvidos + "/" + r.total_de_problemas;
+        novaLinha.appendChild(status);
+
+        lista.appendChild(novaLinha);
+        count++;
+
+      });
+
+    </script>
   </body>
 </html>
