@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Made in UFC</title>
+    <title>Made in UFC - [ROTEIRO] </title>
   </head>
   <body class="container">
     <header class="jumbotron">
@@ -19,7 +19,7 @@
       <hr class="my-4">
       <p>[DESCRIÇÃO SOBRE O ROTEIRO]</p>
       <p>[DIFICULDADE DO ROTEIRO]</p>
-      <a class="btn btn-primary btn-lg" href="https://madeinufc.github.io" role="button">Lista de roteiros</a>
+      <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io" role="button"> &larr; Outros de roteiros</a>
     </header>
 
     <h3>
@@ -32,11 +32,12 @@
             <th scope="col">#</th>
             <th scope="col">Problema</th>
             <th scope="col">Origem</th>
+            <th scope="col">Nível</th>
             <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody id="problemas">
-          <!-- Aqui será gerada um lista dinamicante com javascript -->
+          <!-- Aqui será gerada uma lista dinamicante com javascript -->
         </tbody>
       </table>
 
@@ -46,24 +47,22 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <!-- Gerando lista automática de problemas -->
-    <script>
-        const roteiros = [{
-          titulo: "Exemplo",
-          titulo_origem: "URI",
-          link_origem: "#",
-          status: false //Feita, ou não
-        }];
-  
+    <!-- Gerando lista automatica de problemas -->
+    <script src="../script/index.js"></script>
+    <script type="text/javascript">
+
+        const probls = getProblemas(0);
+
         const lista = document.getElementById("problemas");
         let count = 1;
   
-        roteiros.forEach(p => {
+        probls.forEach(p => {
           const novaLinha = document.createElement("tr");
           const num = document.createElement("th");
           const titulo = document.createElement("td");
           const link = document.createElement("a");
           const origem = document.createElement("td");
+          const nivel = document.createElement("td");
           const origemLink = document.createElement("a");
           const status = document.createElement("td");
   
@@ -71,15 +70,25 @@
           num.innerHTML = count;
           novaLinha.appendChild(num);
   
-          link.innerHTML = p.titulo;
-          link.href = "https://madeinufc.github.io/roteiros/[ROTEIRO]/problemas/problema"+count+"/index.html";
-          titulo.appendChild(link);
+          if(p.status){
+            link.innerHTML = p.titulo;
+            link.href = "https://madeinufc.github.io/roteiros/[ROTEIRO]/problemas/problema"+count+"/index.html";
+            titulo.appendChild(link);
+
+          } else {
+            titulo.innerHTML = p.titulo;
+  
+          }
+
           novaLinha.appendChild(titulo);
 
           origemLink.innerHTML = p.titulo_origem;
           origemLink.href = p.link_origem;
           origem.appendChild(origemLink);
           novaLinha.appendChild(origem);
+
+          nivel.innerHTML = p.nivel;
+          novaLinha.appendChild(nivel)
 
           if(p.status) status.innerHTML =  "&#x1F388;";
           else status.innerHTML = "à ser feita";

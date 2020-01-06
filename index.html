@@ -18,7 +18,7 @@
       </p>
       <hr class="my-4">
       <p>Membros: Anderson Costa, Felipe Barros, Gustavo Marques</p>
-      <a class="btn btn-primary btn-lg" href="https://github.com/MadeInUFC/MadeInUFC.github.io" role="button">GitHub</a>
+      <a class="btn btn-dark btn-lg" href="https://github.com/MadeInUFC/MadeInUFC.github.io" role="button">GitHub</a>
     </header>
 
     <p>
@@ -46,41 +46,43 @@
 
 
     <!-- Gerando lista automática de roteiros -->
-    <script>
-      const roteiros = [{
-        titulo: "Introdução a programação",
-        total_de_problemas: 10,
-        problemas_resolvidos: 0,
-      }];
+    <script src="./script/index.js"></script>
+    <script type="text/javascript">
+      const roteiros = data.roteiros;
+        const lista = document.getElementById("roteiros");
+        let count = 1;
 
-      const lista = document.getElementById("roteiros");
-      let count = 1;
+        let probsResolvidos;
+        let probsTotais;
 
-      roteiros.forEach(r => {
-        const novaLinha = document.createElement("tr");
-        const num = document.createElement("th");
-        const titulo = document.createElement("td");
-        const link = document.createElement("a");
-        const status = document.createElement("td");
+        while (count <= roteiros.length - 1) {
+          let r = roteiros[count]
+          probsRevolvidos = getQtdProblemasResolvidos(count).toString();
+          probsTotais = getProblemas(count).length.toString();
 
-        num.scope = "row";
-        num.innerHTML = count;
-        novaLinha.appendChild(num);
+          let novaLinha = document.createElement("tr");
+          let num = document.createElement("th");
+          let titulo = document.createElement("td");
+          let link = document.createElement("a");
+          let status = document.createElement("td");
 
-        link.innerHTML = r.titulo;
-        link.href = "https://madeinufc.github.io/roteiros/roteiro"+count+"/index.html";
-        titulo.appendChild(link);
-        novaLinha.appendChild(titulo);
+          num.scope = "row";
+          num.innerHTML = count;
+          novaLinha.appendChild(num);
 
-        if(r.problemas_resolvidos === r.total_de_problemas) status.innerHTML =  "&#x1F388;";
-        else status.innerHTML = r.problemas_resolvidos + "/" + r.total_de_problemas;
-        novaLinha.appendChild(status);
+          link.innerHTML = r.titulo;
+          link.href = "https://madeinufc.github.io/roteiros/roteiro"+count+"/index.html";
+          titulo.appendChild(link);
+          novaLinha.appendChild(titulo);
 
-        lista.appendChild(novaLinha);
-        count++;
+          if(getQtdProblemasResolvidos(count).toString() === probsTotais) status.innerHTML =  "&#x1F388;";
+          else status.innerHTML = getQtdProblemasResolvidos(count).toString() + "/" + probsTotais;
+          novaLinha.appendChild(status);
 
-      });
+          lista.appendChild(novaLinha);
+          count++;
+        };
 
-    </script>
+      </script>
   </body>
 </html>
