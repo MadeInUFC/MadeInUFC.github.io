@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Made in UFC</title>
+    <title>Made in UFC - Xadrez</title>
   </head>
   <body class="container">
     <header class="jumbotron">
@@ -17,10 +17,31 @@
         Xadrez
       </p>
       <hr class="my-4">
-      <p>Ainda sem solução...</p>
-      <p>Nível: ?</p>
-      <a class="btn btn-primary btn-lg" href="https://madeinufc.github.io/roteiros/roteiro1/index.html" role="button">Introdução à programção</a>
+      <p> Dadas duas entradas, L: número de linhas de um tabuleiro, e C: número de colunas de um tabuleiro, forneça qual será a cor da última casa no canto inferior direito, sendo 1 para branco de zero para preto. (sabe-se que a primeira casa, do canto superior esquerdo, é sempre branca) </p>
+      <p>Nível: 1</p>
+      <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io/roteiros/[ROTEIRO]/index.html" role="button">Introdução à programção</a>
     </header>
+
+    <h3>Descrição da solução</h3>
+    <p>Podemos observer que o padrão de xadrez se inicia branco em 1x1, que são números ímpares, e se alterna tal qual a paridade dos números da linha e da coluna. Logo, basta analisar se a paridade da linha e coluna coincide, nesse caso será branco, caso contrário será preto.</p>
+
+    <h3>Pseudocódigo</h3>
+    <section class="breadcrumb">
+        <code>
+          L, C: inteiros
+          leia L
+          leia C
+          se L e C são pares ou L e C são ímpares
+            escreva "1"
+          se não
+            escreva "0"
+        </code>
+    </section>
+
+    <h3>Análise</h3>
+    <p>Para todos os casos o tempo de execução é constate (O(1)) visto que há apenas as operaçõs de leitura, comparação e escrita na solução.</p>
+
+    <p><a target="_blank" href="LinkParaGitHub">Implementação em C++</a></p>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

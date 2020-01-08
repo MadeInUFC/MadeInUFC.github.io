@@ -25,7 +25,7 @@ const data = {
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2787",
       nivel: 1,
-      status: false
+      status: true
     },
     
     {
