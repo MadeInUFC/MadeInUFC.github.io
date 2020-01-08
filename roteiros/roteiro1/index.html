@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html  class="h-100" lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,23 +10,25 @@
 
     <title>Made in UFC - Roteiro 1 </title>
   </head>
-  <body class="container">
-    <header class="jumbotron">
-      <h1>Made in UFC - Roteiro 1 </h1>
-      <p class="lead">
-        Introdução à programação
-      </p>
-      <hr class="my-4">
-      <p>Problemas básicos de maratonas de programação</p>
-      <p>Dificultade baixa</p>
-      <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io" role="button"> &larr; Outros roteiros</a>
-    </header>
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <div class="container">
+      <header class="jumbotron">
+        <h1>Made in UFC - Roteiro 1 </h1>
+        <p class="lead">
+          Introdução à programação
+        </p>
+        <hr class="my-4">
+        <p>Problemas básicos de maratonas de programação</p>
+        <p>Dificultade baixa</p>
+        <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io" role="button"> &larr; Outros roteiros</a>
+      </header>
 
-    <h3>
-        Lista de problemas.
-    </h3>
+      <h3>
+          Lista de problemas.
+      </h3>
 
-    <table class="table">
+      <table class="table">
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
@@ -41,6 +43,11 @@
         </tbody>
       </table>
 
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-1 text-light bg-dark text-center"> <p class="container"> Made in UFC - 2020</p> </footer>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -51,54 +58,54 @@
     <script src="../../script/index.js"></script>
     <script type="text/javascript">
 
-        const probls = getProblemas(1);
+      const probls = getProblemas(1);
 
-        const lista = document.getElementById("problemas");
-        let count = 1;
-  
-        probls.forEach(p => {
-          const novaLinha = document.createElement("tr");
-          const num = document.createElement("th");
-          const titulo = document.createElement("td");
-          const link = document.createElement("a");
-          const origem = document.createElement("td");
-          const nivel = document.createElement("td");
-          const origemLink = document.createElement("a");
-          const status = document.createElement("td");
-  
-          num.scope = "row";
-          num.innerHTML = count;
-          novaLinha.appendChild(num);
-  
-          if(p.status){
-            link.innerHTML = p.titulo;
-            link.href = "https://madeinufc.github.io/roteiros/roteiro1/problemas/problema"+count+"/index.html";
-            titulo.appendChild(link);
+      const lista = document.getElementById("problemas");
+      let count = 1;
 
-          } else {
-            titulo.innerHTML = p.titulo;
-  
-          }
+      probls.forEach(p => {
+        const novaLinha = document.createElement("tr");
+        const num = document.createElement("th");
+        const titulo = document.createElement("td");
+        const link = document.createElement("a");
+        const origem = document.createElement("td");
+        const nivel = document.createElement("td");
+        const origemLink = document.createElement("a");
+        const status = document.createElement("td");
 
-          novaLinha.appendChild(titulo);
-          
-          origemLink.innerHTML = p.titulo_origem;
-          origemLink.href = p.link_origem;
-          origemLink.target = "_blank"
-          origem.appendChild(origemLink);
-          novaLinha.appendChild(origem);
+        num.scope = "row";
+        num.innerHTML = count;
+        novaLinha.appendChild(num);
 
-          nivel.innerHTML = p.nivel;
-          novaLinha.appendChild(nivel)
+        if(p.status){
+          link.innerHTML = p.titulo;
+          link.href = "https://madeinufc.github.io/roteiros/roteiro1/problemas/problema"+count+"/index.html";
+          titulo.appendChild(link);
 
-          if(p.status) status.innerHTML =  "&#x1F388;";
-          else status.innerHTML = "à ser feita";
-          novaLinha.appendChild(status);
-  
-          lista.appendChild(novaLinha);
-          count++;
-  
-        });
-      </script>
+        } else {
+          titulo.innerHTML = p.titulo;
+
+        }
+
+        novaLinha.appendChild(titulo);
+        
+        origemLink.innerHTML = p.titulo_origem;
+        origemLink.href = p.link_origem;
+        origemLink.target = "_blank"
+        origem.appendChild(origemLink);
+        novaLinha.appendChild(origem);
+
+        nivel.innerHTML = p.nivel;
+        novaLinha.appendChild(nivel)
+
+        if(p.status) status.innerHTML =  "&#x1F388;";
+        else status.innerHTML = "à ser feita";
+        novaLinha.appendChild(status);
+
+        lista.appendChild(novaLinha);
+        count++;
+
+      });
+    </script>
   </body>
 </html>
