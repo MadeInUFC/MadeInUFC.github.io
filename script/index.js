@@ -40,7 +40,7 @@ const data = {
       titulo: "Pirâmide",
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2785",
-      nivel: 1,
+      nivel: 5,
       status: false
     },
     
@@ -48,15 +48,15 @@ const data = {
       titulo: "Dividindo círculos",
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2968",
-      nivel: 1,
+      nivel: 7,
       status: false
     },
     
     {
-      titulo: "Hora da corriga",
+      titulo: "Hora da corrida",
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2812",
-      nivel: 1,
+      nivel: 5,
       status: true
     },
     
@@ -64,7 +64,7 @@ const data = {
       titulo: "Laércio",
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2786",
-      nivel: 1,
+      nivel: 4,
       status: false
     },
     
@@ -80,7 +80,7 @@ const data = {
       titulo: "Jornada nas estrelas",
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1973",
-      nivel: 1,
+      nivel: 5,
       status: false
     },
     
@@ -88,7 +88,7 @@ const data = {
       titulo: "Pepe, já tirei a vela",
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2152",
-      nivel: 1,
+      nivel: 2,
       status: false
     }]
 
