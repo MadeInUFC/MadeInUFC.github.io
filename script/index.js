@@ -47,7 +47,7 @@ const data = {
     {
       titulo: "Dividindo círculos",
       titulo_origem: "URI",
-      link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2968",
+      link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2802",
       nivel: 7,
       status: false
     },
@@ -55,7 +55,7 @@ const data = {
     {
       titulo: "Hora da corrida",
       titulo_origem: "URI",
-      link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2812",
+      link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2968",
       nivel: 5,
       status: true
     },
@@ -63,7 +63,7 @@ const data = {
     {
       titulo: "Laércio",
       titulo_origem: "URI",
-      link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2786",
+      link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2812",
       nivel: 4,
       status: false
     },
