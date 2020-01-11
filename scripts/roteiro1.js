@@ -1,5 +1,6 @@
 const roteiro1 = {
-  titulo: "Introdução a programação",
+  titulo: "Introdução à programação",
+  num: 1,
   descricao: "Problemas básicos de maratonas de programação",
   dificuldade: "baixa",
   problemas: [
@@ -168,5 +169,3 @@ const roteiro1 = {
     }
   ]
 }
-
-export default roteiro1;

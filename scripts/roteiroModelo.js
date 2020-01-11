@@ -11,9 +11,10 @@
 
 const roteiroModelo = {
   titulo: "Modelo",
+  num: 0,
   descricao: "Modelo para páginas de roteiro",
   dificuldade: "baixa",
-  // Segue uma lista de materiais de apoio e seus links
+  // Segue link para outros problemas e uma lista de materiais de apoio e seus links
   // Não é obrigatório
   materiais_de_apoio: [
     {
@@ -22,7 +23,7 @@ const roteiroModelo = {
     },
 
     {
-      titulo: "Material 1",
+      titulo: "Material 2",
       link: "#",
     }
   ],
@@ -59,5 +60,3 @@ const roteiroModelo = {
     }
   ]
 }
-
-export default roteiroModelo;

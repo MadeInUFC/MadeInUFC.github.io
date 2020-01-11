@@ -8,42 +8,36 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Made in UFC - Xadrez</title>
+    <title id="page-title">Made in UFC </title>
   </head>
   <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
       <div class="container">
         <header class="jumbotron">
           <h1>Made in UFC</h1>
-          <p class="lead">
-            Xadrez
-          </p>
+          <p id="titulo-problema" class="lead"> <!-- O titulo do problema sera inserido aqui dinamicamente --> </p>
           <hr class="my-4">
-          <p> Dadas duas entradas, L: número de linhas de um tabuleiro de xadrez, e C: número de colunas, forneça qual será a cor da última casa no canto inferior direito, sendo 1 para branco de 0 para preto. (sabe-se que a primeira casa, do canto superior esquerdo, é sempre branca) </p>
-          <p>Nível: 1</p>
-          <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io/roteiros/roteiro1/index.html" role="button">Introdução à programção</a>
+          <p id="descricao-problema"> <!-- A descricao do problema será inserida aqui dinamicamente --> </p>
+          <p id="nivel"> <!-- O nível do problema será inserido aqui dinamicamente --> </p>
+          <a id="titulo-roteiro" class="btn btn-dark btn-lg" href="#" role="button">
+            <!-- O título do roteiro sera inserido aqui dinamicamente -->
+          </a>
         </header>
     
         <h3>Descrição da solução</h3>
-        <p>Podemos observar que o padrão de xadrez se inicia branco em 1 x 1, que são números ímpares, e se alterna tal qual a paridade dos números da linha e da coluna. Logo, basta analisar se a paridade da linha e da coluna coincide, nesse caso será branco, caso contrário será preto.</p>
+        <p id="descricao-solucao"> <!-- A descrição da solução será inserida aqui dinamicamente --> </p>
     
         <h3>Pseudocódigo</h3>
         <section class="breadcrumb bg-dark">
-          <code>
-            1 -- L, C: inteiros <br>
-            2 -- leia L <br>
-            3 -- leia C <br>
-            4 -- se L e C são pares ou L e C são ímpares <br>
-            5 -- &emsp; escreva "1" <br>
-            6 -- se não <br>
-            7 -- &emsp; escreva "0" <br>
+          <code id="code">
+            <!-- As linhas do pseudocógido será inseridas aqui dinamicamente -->
           </code>
         </section>
     
         <h3>Análise</h3>
-        <p>Para todos os casos o tempo de execução é constate (O(1)) visto que há apenas as operaçõs de leitura, comparação e escrita na solução.</p>
+        <p id="analise"> <!-- A análise da solução será inserida aqui dinamicamente --> </p>
     
-        <p><a target="_blank" href="https://github.com/MadeInUFC/MadeInUFC.github.io/blob/master/roteiros/roteiro1/problemas/problema1/resposta.cpp">Implementação em C++</a></p>
+        <p><a id="implementacao" target="_blank" href="#"> Implementação em C++</a></p>
         
       </div>
     </main>
@@ -55,5 +49,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <!-- Scripts de construção da página -->
+    <script src="../../../../scripts/builders.js"></script>
+    <script src="../../../../scripts/roteiro1.js"></script>
+    <script>
+      buildProblema(roteiro1, 1);
+    </script>
+
   </body>
 </html>

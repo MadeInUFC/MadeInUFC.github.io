@@ -1,5 +1,25 @@
 const roteiro2 = {
-  titulo: "AD-HOC",
+  titulo: "Ad-hoc",
+  num: 2,
+  descricao: "Em livre tradução do latim, 'para uma finalidade', são problemas com soluções de lógica e matemática",
+  dificuldade: "baixa",
+  outros: [
+    {
+      titulo: "URI - Ad-hoc",
+      link: "https://www.urionlinejudge.com.br/judge/pt/problems/index/2",
+    },
+  ],
+  materiais_de_apoio: [
+    {
+      titulo: "Artigo - Como encontrar uma solução (inglês)",
+      link: "https://www.topcoder.com/community/competitive-programming/tutorials/how-to-find-a-solution/",
+    },
+
+    {
+      titulo: "Artigo - A importância dos algoritmos (inglês",
+      link: "https://www.topcoder.com/community/competitive-programming/tutorials/the-importance-of-algorithms/",
+    }
+  ],
   problemas: [
     {
       titulo: "Copa do Mundo",
@@ -73,5 +93,3 @@ const roteiro2 = {
     }
   ]
 }
-
-export default roteiro2;

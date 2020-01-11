@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html  class="h-100" lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,39 +8,46 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Made in UFC - [ROTEIRO] </title>
+    <title id="page-title"> <!-- Um título será inserido aqui dinamicamente --> </title>
   </head>
-  <body class="container">
-    <header class="jumbotron">
-      <h1>Made in UFC - [ROTEIRO] </h1>
-      <p class="lead">
-        [TÍTULO DO ROTEIRO]
-      </p>
-      <hr class="my-4">
-      <p>[DESCRIÇÃO SOBRE O ROTEIRO]</p>
-      <p>[DIFICULDADE DO ROTEIRO]</p>
-      <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io" role="button"> &larr; Outros de roteiros</a>
-    </header>
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <div id="container" class="container">
+        <header class="jumbotron">
+          <h1 id="title"> <!-- Um título será inserido aqui dinamicamente --> </h1  > 
+          <p id="roteiro-title" class="lead"> <!-- Um título será inserido aqui dinamicamente --> </p>
+          <hr class="my-4">
+          <p id="descricao"> <!-- Uma descrição será inserida aqui dinamicamente --> </p>
+          <p id="dificuldade"> <!-- A dificudade do roteiro será inserida aqui dinamicamnte --> </p>
+          <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io" role="button"> &larr; Outros roteiros</a>
+        </header>
 
-    <h3>
-        Lista de problemas.
-    </h3>
+        <h3>
+            Lista de problemas.
+        </h3>
 
-    <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Problema</th>
-            <th scope="col">Origem</th>
-            <th scope="col">Nível</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
-        <tbody id="problemas">
-          <!-- Aqui será gerada uma lista dinamicante com javascript -->
-        </tbody>
-      </table>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Problema</th>
+              <th scope="col">Origem</th>
+              <th scope="col">Nível</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="problemas">
+            <!-- Aqui será gerada uma lista dinamicante com javascript -->
+          </tbody>
+        </table>
 
+        <!-- Caso haja materiais de apoios ou liks para outros problemas, eles serão inseridos dinamicamente -->
+
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-1 text-light bg-dark text-center"> <p class="container"> Made in UFC - 2020</p> </footer>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -48,56 +55,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Gerando lista automatica de problemas -->
-    <script src="../script/index.js"></script>
+    <script src="../scripts/builders.js"></script>
+    <script src="../scripts/roteiroModelo.js"></script>
     <script type="text/javascript">
-
-        const probls = getProblemas(0);
-
-        const lista = document.getElementById("problemas");
-        let count = 1;
-  
-        probls.forEach(p => {
-          const novaLinha = document.createElement("tr");
-          const num = document.createElement("th");
-          const titulo = document.createElement("td");
-          const link = document.createElement("a");
-          const origem = document.createElement("td");
-          const nivel = document.createElement("td");
-          const origemLink = document.createElement("a");
-          const status = document.createElement("td");
-  
-          num.scope = "row";
-          num.innerHTML = count;
-          novaLinha.appendChild(num);
-  
-          if(p.status){
-            link.innerHTML = p.titulo;
-            link.href = "https://madeinufc.github.io/roteiros/[ROTEIRO]/problemas/problema"+count+"/index.html";
-            titulo.appendChild(link);
-
-          } else {
-            titulo.innerHTML = p.titulo;
-  
-          }
-
-          novaLinha.appendChild(titulo);
-
-          origemLink.innerHTML = p.titulo_origem;
-          origemLink.href = p.link_origem;
-          origem.appendChild(origemLink);
-          novaLinha.appendChild(origem);
-
-          nivel.innerHTML = p.nivel;
-          novaLinha.appendChild(nivel)
-
-          if(p.status) status.innerHTML =  "&#x1F388;";
-          else status.innerHTML = "à ser feita";
-          novaLinha.appendChild(status);
-  
-          lista.appendChild(novaLinha);
-          count++;
-  
-        });
-      </script>
+      buildRoteiro(roteiroModelo, 0);
+    </script>
   </body>
 </html>
