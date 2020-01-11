@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="h-100" lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Made in UFC - Hora da corrida</title>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <div class="container">
+        <header class="jumbotron">
+          <h1>Made in UFC</h1>
+          <p class="lead">
+            Hora da Corrida
+          </p>
+          <hr class="my-4">
+          <p> Dadas duas entradas, V: o números de voltas que uma pessoa deve correr em uma pista, N: número de placas nessa pista, a solução deve mostrar 9 inteiros correspondendestes as quantidades de placas que devem ser percorridas para se alcançar 10%, 20%, 30% ... 90% do percurso.</p>
+          <p>Nível: 5</p>
+          <a class="btn btn-dark btn-lg" href="https://madeinufc.github.io/roteiros/roteiro1/index.html" role="button">Introdução à programção</a>
+        </header>
+    
+        <h3>Descrição da solução</h3>
+        <p>Multiplicando as entradas do número de placas pelo número de voltas, teremos a quantidade total, ou seja, 100% do número de placas do percurso. Então podemos conseguir as demais porcentagens com regra de 3 simples. </p>
+    
+        <h3>Pseudocódigo</h3>
+        <section class="breadcrumb bg-dark">
+          <code>
+            1 -- V, N: inteiros <br>
+            2 -- leia V <br>
+            3 -- leia N <br>
+            4 -- P = V * N <br>
+            5 -- escreva teto((10/100) * P)  teto((20/100) * P)  teto((30/100) * P)  teto((40/100) * P)  teto((50/100) * P) teto((60/100) * P) teto((70/100) * P) teto((80/100) * P) teto((90/100) * P)
+          </code>
+        </section>
+    
+        <h3>Análise</h3>
+        <p>Para todos os casos o tempo de execução é constate (O(1)) visto que há apenas as operaçõs de leitura, e escrita na solução.</p>
+    
+        <p><a target="_blank" href="https://github.com/MadeInUFC/MadeInUFC.github.io/blob/master/roteiros/roteiro1/problemas/problema5/resposta.cpp">Implementação em C++</a></p>
+        
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-1 text-light bg-dark text-center"> <p class="container"> Made in UFC - 2020</p> </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
