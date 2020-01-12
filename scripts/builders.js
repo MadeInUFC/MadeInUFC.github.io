@@ -20,7 +20,7 @@ function buildRoteiro(roteiro) {
   document.getElementById("title").innerHTML = "Made in UFC - Roteiro " + roteiro.num;
   document.getElementById("roteiro-title").innerHTML = roteiro.titulo;
   document.getElementById("descricao").innerHTML = roteiro.descricao;
-  document.getElementById("dificuldade").innerHTML = roteiro.dificuldade;
+  document.getElementById("dificuldade").innerHTML = "Dificuldade " + roteiro.dificuldade;
 
   //Inserindo lista de problemas
   const probls = roteiro.problemas;

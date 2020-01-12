@@ -16,7 +16,7 @@ const roteiro2 = {
     },
 
     {
-      titulo: "Artigo - A importância dos algoritmos (inglês",
+      titulo: "Artigo - A importância dos algoritmos (inglês)",
       link: "https://www.topcoder.com/community/competitive-programming/tutorials/the-importance-of-algorithms/",
     }
   ],
