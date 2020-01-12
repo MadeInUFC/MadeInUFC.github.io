@@ -140,7 +140,7 @@ function buildProblema(roteiro, indiceProblema) {
   let count = 1;
   problema.pseudocodigo.forEach(linha => {
     let div = document.createElement("div");
-    div.innerHTML = count + "|&emsp;" + linha;
+    div.innerHTML = count + (count < 10 ? "&emsp; |&emsp;" : " |&emsp;") + linha;
     codigo.appendChild(div);
     count++;
   });

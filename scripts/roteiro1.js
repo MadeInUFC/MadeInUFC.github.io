@@ -146,7 +146,8 @@ const roteiro1 = {
       status: true,
       descricao_problema: "A cada registro, três números inteiros são cadastrados, sendo a hora e o minuto que o evento ocorreu e um valor que representa se a porta abriu ou fechou naquele momento. Pepe pede a sua ajuda para converter os dados do log em dados mais legíveis para ele. A primeira linha contém a quantidade de casos de teste. Cada linha de um caso de teste possui três inteiros H, M e O, sendo a hora, o minuto da ocorrência, e a própria ocorrência (zero se a porta fechou ou um se a porta abriu).",
       descricao_solucao: "Basta ler os casos de teste, e printar as informações de acordo com a verificação se a terceira informação é 0 ou 1, tomando cuidado na formatação caso H ou M for menor que 10.",
-      analise: "https://github.com/MadeInUFC/MadeInUFC.github.io/blob/master/roteiros/roteiro1/problemas/problema6/resposta.cpp",
+      analise: "Para todos os casos o tempo de execução é constate (O(1)) visto que há apenas as verificações para a formatação correta e para mudar uma palavra.",
+      implementacao: "https://github.com/MadeInUFC/MadeInUFC.github.io/blob/master/roteiros/roteiro1/problemas/problema6/resposta.cpp",
       pseudocodigo: [
         "H, M, O: inteiros",
         "Leia H, M, O",
