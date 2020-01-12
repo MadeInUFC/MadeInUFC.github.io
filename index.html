@@ -51,44 +51,44 @@
 
 
     <!-- Gerando lista automática de roteiros -->
+    <script src="./scripts/builders.js"></script>
     <script src="./scripts/roteiro1.js"></script>
     <script src="./scripts/roteiro2.js"></script>
     <script type="text/javascript">
       const roteiros = [roteiro1, roteiro2];
-        const lista = document.getElementById("roteiros");
-        let count = 1;
+      const lista = document.getElementById("roteiros");
+      let count = 0;
 
-        let probsResolvidos;
-        let probsTotais;
+      let probsResolvidos;
+      let probsTotais;
 
-        while (count <= roteiros.length - 1) {
-          let r = roteiros[count]
-          probsRevolvidos = getQtdProblemasResolvidos(count).toString();
-          probsTotais = getProblemas(count).length.toString();
+      roteiros.forEach(r => {
+        probsRevolvidos = getQtdProblemasResolvidos(count).toString();
+        probsTotais = r.problemas.length.toString();
 
-          let novaLinha = document.createElement("tr");
-          let num = document.createElement("th");
-          let titulo = document.createElement("td");
-          let link = document.createElement("a");
-          let status = document.createElement("td");
+        let novaLinha = document.createElement("tr");
+        let num = document.createElement("th");
+        let titulo = document.createElement("td");
+        let link = document.createElement("a");
+        let status = document.createElement("td");
 
-          num.scope = "row";
-          num.innerHTML = count;
-          novaLinha.appendChild(num);
+        num.scope = "row";
+        num.innerHTML = count + 1;
+        novaLinha.appendChild(num);
 
-          link.innerHTML = r.titulo;
-          link.href = "https://madeinufc.github.io/roteiros/roteiro"+count+"/index.html";
-          titulo.appendChild(link);
-          novaLinha.appendChild(titulo);
+        link.innerHTML = r.titulo;
+        link.href = "https://madeinufc.github.io/roteiros/roteiro"+count+"/index.html";
+        titulo.appendChild(link);
+        novaLinha.appendChild(titulo);
 
-          if(getQtdProblemasResolvidos(count).toString() === probsTotais) status.innerHTML =  "&#x1F388;";
-          else status.innerHTML = getQtdProblemasResolvidos(count).toString() + "/" + probsTotais;
-          novaLinha.appendChild(status);
+        if(getQtdProblemasResolvidos(count).toString() === probsTotais) status.innerHTML =  "&#x1F388;";
+        else status.innerHTML = getQtdProblemasResolvidos(count).toString() + "/" + probsTotais;
+        novaLinha.appendChild(status);
 
-          lista.appendChild(novaLinha);
-          count++;
-        };
+        lista.appendChild(novaLinha);
+        count++;
+      });
 
-      </script>
+    </script>
   </body>
 </html c>
