@@ -44,7 +44,7 @@ function buildRoteiro(roteiro) {
 
     if(p.status){
       link.innerHTML = p.titulo;
-      link.href = "https://madeinufc.github.io/roteiros/roteiro1/problemas/problema"+count+"/index.html";
+      link.href = "https://madeinufc.github.io/roteiros/roteiro"+ roteiro.num +"/problemas/problema"+count+"/index.html";
       titulo.appendChild(link);
 
     } else {
