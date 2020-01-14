@@ -40,7 +40,7 @@ const roteiro2 = {
       implementacao: "https://github.com/MadeInUFC/MadeInUFC.github.io/blob/master/roteiros/roteiro2/problemas/problema2/resposta.cpp",
       pseudocodigo:[
         "N: inteiro",
-        "Leita N",
+        "Leia N",
         "Se N < 11 então",
         "&emsp; retorne 7",
         "Senão, se N < 31",
@@ -91,7 +91,24 @@ const roteiro2 = {
       titulo_origem: "URI",
       link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/2378",
       nivel: 1,
-      status: false,
+      status: true,
+      descricao_problema: "Dadas as entradas N = número de leituras, e C = limite do número de pessoas em um elevaddor, o problema consiste em responder se o limite de pessoas em um elevador é excedido ou não após N entradas de leituras de pessoas que saem (S) e entram (E) em um elevador. A saída deverá ser 'S' caso o valor seja excedido, ou 'N' caso contrário",
+      descricao_solucao: "Para solucionar o problema podemos guardar duas variáveis: T para o total de pessoas que estão no elevador após cada análise, e o caractere de saida 'result' que deve ter o valor inicial de 'N'. Para cada entrada de S, subtrai-se S de T (os casos de teste nunca serão negativos), e para cada  entrada de E, adiciona-se E a T. Antes da próxima análise, verifica-se se T > C, nesse caso, o valor de result passará a ser 'S', que será exibido após o fim das entradas de leitura (repare que, caso não aconteça T > C, a saída será 'N', como esperado).",
+      analise: "A complexidade da solução depende invariávelmente do número de entradas de leitura, resultante do laço na linha 5, portanto será linear com O(n).",
+      implementacao: "https://github.com/MadeInUFC/MadeInUFC.github.io/blob/master/roteiros/roteiro2/problemas/problema8/resposta.cpp",
+      pseudocodigo:[
+        "N, C, T, i: inteiro",
+        "result: caractere",
+        "T <- 0",
+        "result <- 'N'",
+        "Para i <-0 até N - 1, faça",
+        "&emsp; Leia S e E",
+        "&emsp; T <- T - S",
+        "&emsp; T <- T + E",
+        "&emsp; Se T > C faça",
+        "&emsp;&emsp; result <- 'S'",
+        "Retorne result"
+      ]
     },
     {
       titulo: "Mini-Poker",
