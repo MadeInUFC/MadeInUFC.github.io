@@ -53,14 +53,6 @@ const roteiro3 = {
       },
 
       {
-        titulo: "Quem vai ser reprovado?",
-        titulo_origem: "URI",
-        link_origem: " https://www.urionlinejudge.com.br/judge/pt/problems/view/2134",
-        nivel: 0,
-        status: false,
-      },
-
-      {
         titulo: "Proteja sua senha",
         titulo_origem: "URI",
         link_origem: " https://www.urionlinejudge.com.br/judge/pt/problems/view/2287",
