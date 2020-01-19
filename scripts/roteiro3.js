@@ -40,7 +40,7 @@ const roteiro3 = {
         titulo: "Ele está impedido",
         titulo_origem: "URI",
         link_origem: " https://www.urionlinejudge.com.br/judge/pt/problems/view/1410",
-        nivel: 0,
+        nivel: 3,
         status: false,
       },
 
@@ -48,7 +48,7 @@ const roteiro3 = {
         titulo: "Quem vai ser reprovado?",
         titulo_origem: "URI",
         link_origem: " https://www.urionlinejudge.com.br/judge/pt/problems/view/2134",
-        nivel: 0,
+        nivel: 6,
         status: false,
       },
 
@@ -56,7 +56,7 @@ const roteiro3 = {
         titulo: "Proteja sua senha",
         titulo_origem: "URI",
         link_origem: " https://www.urionlinejudge.com.br/judge/pt/problems/view/2287",
-        nivel: 0,
+        nivel: 6,
         status: false,
       },
 
@@ -64,7 +64,7 @@ const roteiro3 = {
         titulo: "Troca de cartas",
         titulo_origem: "URI",
         link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1104",
-        nivel: 0,
+        nivel: 4,
         status: false,
       },
 
@@ -72,7 +72,7 @@ const roteiro3 = {
         titulo: "Mário",
         titulo_origem: "URI",
         link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1408",
-        nivel: 0,
+        nivel: 6,
         status: false,
       },
 
@@ -80,7 +80,7 @@ const roteiro3 = {
         titulo: "Triângulos",
         titulo_origem: "URI",
         link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1472",
-        nivel: 0,
+        nivel: 6,
         status: false,
       },
 
@@ -88,7 +88,7 @@ const roteiro3 = {
         titulo: "Grid de Largada",
         titulo_origem: "URI",
         link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1228",
-        nivel: 0,
+        nivel: 3,
         status: false,
       },
 
@@ -96,7 +96,7 @@ const roteiro3 = {
         titulo: "Subsequências",
         titulo_origem: "URI",
         link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1507",
-        nivel: 0,
+        nivel: 5,
         status: false,
       },
 
@@ -104,7 +104,7 @@ const roteiro3 = {
         titulo: "Trilhos",
         titulo_origem: "URI",
         link_origem: "https://www.urionlinejudge.com.br/judge/pt/problems/view/1062",
-        nivel: 0,
+        nivel: 4,
         status: false,
       },
       
