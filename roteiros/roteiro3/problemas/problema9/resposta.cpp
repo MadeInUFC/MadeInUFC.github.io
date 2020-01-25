@@ -9,35 +9,72 @@ int main() {
   stack<int> estacao;
   queue<int> ordem;
 
-  while(cin >> N && N != 0){
-    trem = 1; 
-    while(cin >> aux && aux !=0){
+  cin >> N;
+
+  while(N != 0){
+    cin >> aux;
+
+    while(aux !=0){
       ordem.push(aux);
       for(int i=1; i < N-1; i++){
         cin >> aux;
         ordem.push(aux);
       }
 
+      trem = 1;
       stop = false;
 
       while(!ordem.empty() && !stop){
-        if(ordem.front() == trem){
-          ordem.pop();
+        if(estacao.empty()){
+          estacao.push(trem);
           trem++;
 
+          if(estacao.top() == ordem.front()){
+            estacao.pop();
+            ordem.pop();
+
+          } else if(trem > N){
+            stop = true;
+
+          }
         } else {
-          if(estacao.empty()){
+          if(estacao.top() == ordem.front()){
+            estacao.pop();
+            ordem.pop();
+
+          } else if(trem <= N){
             estacao.push(trem);
             trem++;
 
           } else {
-            if(estacao.top() == trem){
-
-            }
+            stop = true;
           }
-        }
+        }        
       }
+
+      if(stop){
+        cout << "No" << endl;
+
+        while(!ordem.empty()){
+          ordem.pop();
+        }
+
+        while(!estacao.empty()){
+          estacao.pop();
+        }
+
+      } else {
+        cout << "Yes" << endl;
+      }
+
+      cin >> aux;
     }
+
+    cout << endl;
+    cin >> N;
+    
   }
+
+  return 0;
 
 }
