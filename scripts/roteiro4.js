@@ -1,7 +1,7 @@
 const roteiro4 = {
   titulo: "Divisão e conquista e força bruta",
   num: 4,
-  descricao: "Problemas com uso de estrutura de organização de dados (pilhas, filas, conjuntos, etc) e utilização de Standard Template Library de C e C++",
+  descricao: "Problemas de maratona de programação com uso do paradigma de divisão e conquista, recursividade, escolha gulosa, programação dinâmica ou força bruta.",
   dificuldade: "alta",
   materiais_de_apoio: [
     {
